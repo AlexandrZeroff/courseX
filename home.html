@@ -1,366 +1,572 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link href="/css/basic.css" rel="stylesheet" />
-    <link href="/css/home.css" rel="stylesheet" />
-    <title>CreateX Online Courses</title>
-    <meta name="viewport" content="width=device-width, initialscale=1.0" />
-  </head>
-  <body>
-    <svg
-      style="position: absolute; width: 0; height: 0; overflow: hidden"
-      version="1.1"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-    >
-      <defs>
-        <symbol id="icon-menu" viewBox="0 0 24 24">
-          <path
-            d="M3 13h18c0.552 0 1-0.448 1-1s-0.448-1-1-1h-18c-0.552 0-1 0.448-1 1s0.448 1 1 1zM3 7h18c0.552 0 1-0.448 1-1s-0.448-1-1-1h-18c-0.552 0-1 0.448-1 1s0.448 1 1 1zM3 19h18c0.552 0 1-0.448 1-1s-0.448-1-1-1h-18c-0.552 0-1 0.448-1 1s0.448 1 1 1z"
-          ></path>
-        </symbol>
-      </defs>
-    </svg>
-    <section id="homescreen">
-      <div class="flex-col section-wrap home-wrap">
-        <img src="source/homepage/misc/shapes-arrows.svg" id="dec-1" />
-        <img src="source/homepage/misc/shapes-arrows.svg" id="dec-2" />
-        <img src="source/homepage/misc/half-circle.svg" id="dec-3" />
-        <img src="source/homepage/misc/circles.svg" id="dec-4" />
-        <div class="flex-row-center menu-wrap">
-          <img src="source/homepage/logo.svg" alt="CourseX Logo" />
-          <nav class="menu-nav">
-            <a href="#">About Us</a>
-            <a href="#"
-              >Courses <img src="source/homepage/down-arrow.svg" class="arrow"
-            /></a>
-            <a href="#"
-              >Events <img src="source/homepage/down-arrow.svg" class="arrow"
-            /></a>
-            <a href="#"
-              >Blog <img src="source/homepage/down-arrow.svg" class="arrow"
-            /></a>
-            <a href="#">Contacts</a>
-          </nav>
-          <button
-            class="btn-fill btn-w-mid btn-h-mid menu-btn"
-            type="button"
-            id="get-consult"
-          >
-            Get consultation
-          </button>
-          <button class="navbar-toggler">
-            <svg class="icon">
-              <use xlink:href="#icon-menu"></use>
-            </svg>
-          </button>
-          <img src="source/homepage/person.svg" class="person-img" />
-          <a href="#" class="log-link">Log in/Register</a>
-        </div>
-        <div class="flex-column swapper-780 home-swap">
-          <picture class="home-pic">
-            <img src="source/homepage/home-pic.svg" alt="Study with us!" />
-          </picture>
-          <div class="flex-column">
-            <div class="flex-row-center play-wrap">
-              <a href="#" class="play-button"
-                ><img src="source/homepage/button-play.svg" alt="Play"
-              /></a>
-              <p>Play showreel</p>
-            </div>
-            <h1>Enjoy studying with Createx Online Courses</h1>
-            <div class="flex-row-center play-wrap">
-              <button
-                class="btn-outline btn-w-sm btn-h-lg"
-                type="button"
-                id="about_us"
-              >
-                About us
-              </button>
-              <button
-                class="btn-fill btn-w-lg btn-h-lg"
-                type="button"
-                id="explore"
-              >
-                Explore courses
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="empty-5"></div>
-        <div class="flex-row statistics">
-          <p><span class="huge">1200 </span>Students graduated</p>
-          <span class="main-color">&#8226;</span>
-          <p><span class="huge">84 </span>Completed courses</p>
-          <span class="main-color">&#8226;</span>
-          <p><span class="huge">16 </span>Qualified tutors</p>
-          <span class="main-color">&#8226;</span>
-          <p><span class="huge">5 </span>Years of expirience</p>
-        </div>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="/FastUI/fast.css" rel="stylesheet" />
+  <link href="/css/elements.css" rel="stylesheet" />
+  <link href="/css/basic.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/slider.css">
+  <link href="/css/home.css" rel="stylesheet" />
+  <script defer src="/scripts/slider.js"></script>
+  <script defer src="/scripts/home.js"></script>
+  <title>CreateX Online Courses</title>
+  <meta name="viewport" content="width=device-width, initialscale=1.0" />
+</head>
+
+<body>
+  <svg style="position: absolute; width: 0; height: 0; overflow: hidden" version="1.1"
+    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <symbol id="icon-menu" viewBox="0 0 24 24">
+        <path
+          d="M3 13h18c0.552 0 1-0.448 1-1s-0.448-1-1-1h-18c-0.552 0-1 0.448-1 1s0.448 1 1 1zM3 7h18c0.552 0 1-0.448 1-1s-0.448-1-1-1h-18c-0.552 0-1 0.448-1 1s0.448 1 1 1zM3 19h18c0.552 0 1-0.448 1-1s-0.448-1-1-1h-18c-0.552 0-1 0.448-1 1s0.448 1 1 1z">
+        </path>
+      </symbol>
+      <symbol id="icon-arrow-left" viewBox="0 0 24 24">
+        <path
+          d="M12.707 18.293l-5.293-5.293h11.586c0.552 0 1-0.448 1-1s-0.448-1-1-1h-11.586l5.293-5.293c0.391-0.391 0.391-1.024 0-1.414s-1.024-0.391-1.414 0l-7 7c-0.096 0.096-0.168 0.206-0.217 0.324-0.051 0.122-0.076 0.253-0.076 0.383 0 0.256 0.098 0.512 0.293 0.707l7 7c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414z">
+        </path>
+      </symbol>
+      <symbol id="icon-arrow-right" viewBox="0 0 24 24">
+        <path
+          d="M11.293 5.707l5.293 5.293h-11.586c-0.552 0-1 0.448-1 1s0.448 1 1 1h11.586l-5.293 5.293c-0.391 0.391-0.391 1.024 0 1.414s1.024 0.391 1.414 0l7-7c0.092-0.092 0.166-0.202 0.217-0.324 0.101-0.245 0.101-0.521 0-0.766-0.049-0.118-0.121-0.228-0.217-0.324l-7-7c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414z">
+        </path>
+      </symbol>
+    </defs>
+  </svg>
+  <section id="homescreen">
+    <div class="flex-col section-wrap home-wrap">
+      <img src="source/homepage/misc/shapes-arrows.svg" id="dec-1" />
+      <img src="source/homepage/misc/shapes-arrows.svg" id="dec-2" />
+      <img src="source/homepage/misc/half-circle.svg" id="dec-3" />
+      <img src="source/homepage/misc/circles.svg" id="dec-4" />
+      <div class="flex-row-center menu-wrap">
+        <img src="source/homepage/logo.svg" alt="CourseX Logo" />
+        <nav class="menu-nav">
+          <a href="#">About Us</a>
+          <a href="#">Courses <img src="source/homepage/down-arrow.svg" class="down-arrow" /></a>
+          <a href="#">Events <img src="source/homepage/down-arrow.svg" class="down-arrow" /></a>
+          <a href="#">Blog <img src="source/homepage/down-arrow.svg" class="down-arrow" /></a>
+          <a href="#">Contacts</a>
+        </nav>
+        <button class="btn-fill btn-w-mid btn-h-mid menu-btn" type="button" id="get-consult">
+          Get consultation
+        </button>
+        <button class="navbar-toggler">
+          <svg class="icon">
+            <use xlink:href="#icon-menu"></use>
+          </svg>
+        </button>
+        <img src="source/homepage/person.svg" class="person-img" />
+        <a href="#" class="log-link">Log in/Register</a>
       </div>
-    </section>
-    <section id="who">
-      <div class="section-wrap">
-        <img src="source/homepage/misc/dots.svg" id="dec-5" />
-        <img src="source/homepage/misc/circles-yellow.svg" id="dec-6" />
-        <div class="flex-column swapper-780 who-swap">
-          <img
-            src="source/homepage/who.jpg"
-            alt="Why CourseX?"
-            class="who-pic"
-          />
-          <div class="flex-column who-tags">
-            <h4>WHO WE ARE</h4>
-            <h2>Why CreateX?</h2>
-            <ul>
-              <li>
-                A fermentum in morbi pretium aliquam adipiscing donec tempus.
-              </li>
-              <li>Vulputate placerat amet pulvinar lorem nisl.</li>
-              <li>
-                Consequat feugiat habitant gravida quisque elit bibendum id
-                adipiscing sed.
-              </li>
-              <li>Etiam duis lobortis in fames ultrices commodo nibh.</li>
-              <li>Tincidunt sagittis neque sem ac eget.</li>
-              <li>
-                Ultricies amet justo et eget quisque purus vulputate dapibus
-                tortor.
-              </li>
-            </ul>
-            <button type="button" class="btn-fill btn-w-mid btn-h-mid who-btn">
-              More about us
+      <div class="flex-column swapper-780 home-swap">
+        <picture class="home-pic">
+          <img src="source/homepage/home-pic.svg" alt="Study with us!" />
+        </picture>
+        <div class="flex-column">
+          <div class="flex-row-center play-wrap">
+            <a href="#" class="play-button"><img src="source/homepage/button-play.svg" alt="Play" /></a>
+            <p>Play showreel</p>
+          </div>
+          <h1>Enjoy studying with Createx Online Courses</h1>
+          <div class="flex-row-center play-wrap">
+            <button class="btn-outline btn-w-sm btn-h-lg" type="button" id="about_us">
+              About us
+            </button>
+            <button class="btn-fill btn-w-lg btn-h-lg" type="button" id="explore">
+              Explore courses
             </button>
           </div>
         </div>
-        <div class="empty-5 wide-only"></div>
       </div>
-    </section>
-    <section id="courses">
-      <div class="container courses-wrap">
-        <h4>READY TO LEARN?</h4>
-        <div class="flex-row-center">
-          <h2>Featured Courses</h2>
-          <button
-            type="button"
-            class="btn-outline btn-h-mid btn-w-mid btn-wide-only"
-          >
-            View all courses
+      <div class="empty-5"></div>
+      <div class="flex-row statistics">
+        <p><span class="huge">1200 </span>Students graduated</p>
+        <span class="main-color">&#8226;</span>
+        <p><span class="huge">84 </span>Completed courses</p>
+        <span class="main-color">&#8226;</span>
+        <p><span class="huge">16 </span>Qualified tutors</p>
+        <span class="main-color">&#8226;</span>
+        <p><span class="huge">5 </span>Years of expirience</p>
+      </div>
+    </div>
+  </section>
+  <section id="who">
+    <div class="section-wrap">
+      <img src="source/homepage/misc/dots.svg" id="dec-5" />
+      <img src="source/homepage/misc/circles-yellow.svg" id="dec-6" />
+      <div class="flex-column swapper-780 who-swap">
+        <img src="source/homepage/who.jpg" alt="Why CourseX?" class="who-pic" />
+        <div class="flex-column who-tags">
+          <h4>WHO WE ARE</h4>
+          <h2>Why CreateX?</h2>
+          <ul>
+            <li>
+              A fermentum in morbi pretium aliquam adipiscing donec tempus.
+            </li>
+            <li>Vulputate placerat amet pulvinar lorem nisl.</li>
+            <li>
+              Consequat feugiat habitant gravida quisque elit bibendum id
+              adipiscing sed.
+            </li>
+            <li>Etiam duis lobortis in fames ultrices commodo nibh.</li>
+            <li>Tincidunt sagittis neque sem ac eget.</li>
+            <li>
+              Ultricies amet justo et eget quisque purus vulputate dapibus
+              tortor.
+            </li>
+          </ul>
+          <button type="button" class="btn-fill btn-w-mid btn-h-mid who-btn">
+            More about us
           </button>
         </div>
-        <div class="grid cards-wrap">
-          <div class="course-card">
-            <div class="card-photo">
-              <img src="source/homepage/courses/first.jpg" />
-            </div>
-            <div class="flex-column card-content">
-              <span class="card-span bg-mint">Marketing</span>
-              <h5>The Ultimate Google Ads Training Course</h5>
-              <p>
-                <span class="text-danger">$100</span
-                ><span class="text-faded"> | by Jerome Bell</span>
-              </p>
-            </div>
-          </div>
-          <div class="course-card">
-            <div class="card-photo">
-              <img src="source/homepage/courses/second.jpg" />
-            </div>
-            <div class="flex-column card-content">
-              <span class="card-span bg-violet">Management</span>
-              <h5>Product Management Fundamentals</h5>
-              <p>
-                <span class="text-danger">$480</span
-                ><span class="text-faded"> | by Marvin McKinney</span>
-              </p>
-            </div>
-          </div>
-          <div class="course-card">
-            <div class="card-photo">
-              <img src="source/homepage/courses/third.jpg" />
-            </div>
-            <div class="flex-column card-content">
-              <span class="card-span bg-light-orange">HR & Recruting</span>
-              <h5>HR Management and Analytics</h5>
-              <p>
-                <span class="text-danger">$200</span
-                ><span class="text-faded"> | by Leslie Alexander Li</span>
-              </p>
-            </div>
-          </div>
-          <div class="course-card">
-            <div class="card-photo">
-              <img src="source/homepage/courses/fourth.jpg" />
-            </div>
-            <div class="flex-column card-content">
-              <span class="card-span bg-mint">Marketing</span>
-              <h5>Brand Management & PR Communications</h5>
-              <p>
-                <span class="text-danger">$530</span
-                ><span class="text-faded"> | by Kristin Watson</span>
-              </p>
-            </div>
-          </div>
-          <div class="course-card">
-            <div class="card-photo">
-              <img src="source/homepage/courses/fifth.jpg" />
-            </div>
-            <div class="flex-column card-content">
-              <span class="card-span bg-violet">Management</span>
-              <h5>Business Development Management</h5>
-              <p>
-                <span class="text-danger">$400</span
-                ><span class="text-faded"> | by Dianne Russell</span>
-              </p>
-            </div>
-          </div>
-          <div class="course-card">
-            <div class="card-photo">
-              <img src="source/homepage/courses/sixth.jpg" />
-            </div>
-            <div class="flex-column card-content">
-              <span class="card-span bg-crimson">Design</span>
-              <h5>Graphic Design Basic</h5>
-              <p>
-                <span class="text-danger">$500</span
-                ><span class="text-faded"> | by Guy Hawkins</span>
-              </p>
-            </div>
-          </div>
-        </div>
-        <button
-          type="button"
-          class="btn-outline btn-h-lg btn-w-lg btn-mob-only centered"
-        >
+      </div>
+      <div class="empty-5 wide-only"></div>
+    </div>
+  </section>
+  <section id="courses">
+    <div class="container courses-wrap">
+      <h4>READY TO LEARN?</h4>
+      <div class="flex-row-center">
+        <h2>Featured Courses</h2>
+        <button type="button" class="btn-outline btn-h-mid btn-w-mid btn-wide-only">
           View all courses
         </button>
-        <div class="empty-15 wide-only"></div>
-        <div class="empty-10 mobile-only"></div>
       </div>
-    </section>
-    <section id="benefits">
-      <div class="container benefits-wrap">
-        <h4>OUR BENEFITS</h4>
-        <h2>That`s how we do it</h2>
-        <div class="benefits-scroll">
-          <div class="b-scroll-item item-danger">
+      <div class="grid cards-wrap">
+        <div class="course-card">
+          <div class="card-photo">
+            <img src="source/homepage/courses/first.jpg" />
+          </div>
+          <div class="flex-column card-content">
+            <span class="card-span bg-mint">Marketing</span>
+            <h5>The Ultimate Google Ads Training Course</h5>
             <p>
-              <span><img src="source/homepage/Star.svg" /></span> Experienced
-              Tutors
-            </p>
-          </div>
-          <div class="b-scroll-item">
-            <p class="text-faded">
-              <span><img src="source/homepage/like.svg" /></span> Feedback &
-              Support
-            </p>
-          </div>
-          <div class="b-scroll-item">
-            <p class="text-faded">
-              <span><img src="source/homepage/library.svg" /></span> 24/7 Online
-              Library
-            </p>
-          </div>
-          <div class="b-scroll-item">
-            <p class="text-faded">
-              <span><img src="source/homepage/chat.svg" /></span> Community
+              <span class="text-danger">$100</span><span class="text-faded"> | by Jerome Bell</span>
             </p>
           </div>
         </div>
-        <div class="swapper-780 benefits-swap">
-          <img
-            src="source/homepage/illustration2.svg"
-            alt="Our benefits"
-            class="img-w-100"
-          />
-          <div>
-            <h3>Only practicing tutors</h3>
+        <div class="course-card">
+          <div class="card-photo">
+            <img src="source/homepage/courses/second.jpg" />
+          </div>
+          <div class="flex-column card-content">
+            <span class="card-span bg-violet">Management</span>
+            <h5>Product Management Fundamentals</h5>
             <p>
-              Urna nisi, arcu cras nunc. Aenean quam est lobortis mi non fames
-              dictum suspendisse. Morbi mauris cras massa ut dolor quis sociis
-              mollis augue. Nunc, sodales tortor sit diam mi amet massa.
-              Fermentum diam diam sociis vestibulum. Nulla nisl accumsan, id
-              dignissim massa ut amet. Amet enim, nisi tempus vehicula.
+              <span class="text-danger">$480</span><span class="text-faded"> | by Marvin McKinney</span>
             </p>
+          </div>
+        </div>
+        <div class="course-card">
+          <div class="card-photo">
+            <img src="source/homepage/courses/third.jpg" />
+          </div>
+          <div class="flex-column card-content">
+            <span class="card-span bg-light-orange">HR & Recruting</span>
+            <h5>HR Management and Analytics</h5>
+            <p>
+              <span class="text-danger">$200</span><span class="text-faded"> | by Leslie Alexander Li</span>
+            </p>
+          </div>
+        </div>
+        <div class="course-card">
+          <div class="card-photo">
+            <img src="source/homepage/courses/fourth.jpg" />
+          </div>
+          <div class="flex-column card-content">
+            <span class="card-span bg-mint">Marketing</span>
+            <h5>Brand Management & PR Communications</h5>
+            <p>
+              <span class="text-danger">$530</span><span class="text-faded"> | by Kristin Watson</span>
+            </p>
+          </div>
+        </div>
+        <div class="course-card">
+          <div class="card-photo">
+            <img src="source/homepage/courses/fifth.jpg" />
+          </div>
+          <div class="flex-column card-content">
+            <span class="card-span bg-violet">Management</span>
+            <h5>Business Development Management</h5>
+            <p>
+              <span class="text-danger">$400</span><span class="text-faded"> | by Dianne Russell</span>
+            </p>
+          </div>
+        </div>
+        <div class="course-card">
+          <div class="card-photo">
+            <img src="source/homepage/courses/sixth.jpg" />
+          </div>
+          <div class="flex-column card-content">
+            <span class="card-span bg-crimson">Design</span>
+            <h5>Graphic Design Basic</h5>
+            <p>
+              <span class="text-danger">$500</span><span class="text-faded"> | by Guy Hawkins</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn-outline btn-h-lg btn-w-lg btn-mob-only centered">
+        View all courses
+      </button>
+      <div class="empty-15 wide-only"></div>
+      <div class="empty-10 mobile-only"></div>
+    </div>
+  </section>
+  <section id="benefits">
+    <div class="container benefits-wrap">
+      <h4>OUR BENEFITS</h4>
+      <h2>That`s how we do it</h2>
+      <div class="benefits-scroll">
+        <div class="b-scroll-item item-danger">
+          <p>
+            <span><img src="source/homepage/Star.svg" /></span> Experienced
+            Tutors
+          </p>
+        </div>
+        <div class="b-scroll-item">
+          <p class="text-faded">
+            <span><img src="source/homepage/like.svg" /></span> Feedback &
+            Support
+          </p>
+        </div>
+        <div class="b-scroll-item">
+          <p class="text-faded">
+            <span><img src="source/homepage/library.svg" /></span> 24/7 Online
+            Library
+          </p>
+        </div>
+        <div class="b-scroll-item">
+          <p class="text-faded">
+            <span><img src="source/homepage/chat.svg" /></span> Community
+          </p>
+        </div>
+      </div>
+      <div class="swapper-780 benefits-swap">
+        <img src="source/homepage/illustration2.svg" alt="Our benefits" class="img-w-100" />
+        <div>
+          <h3>Only practicing tutors</h3>
+          <p>
+            Urna nisi, arcu cras nunc. Aenean quam est lobortis mi non fames
+            dictum suspendisse. Morbi mauris cras massa ut dolor quis sociis
+            mollis augue. Nunc, sodales tortor sit diam mi amet massa.
+            Fermentum diam diam sociis vestibulum. Nulla nisl accumsan, id
+            dignissim massa ut amet. Amet enim, nisi tempus vehicula.
+          </p>
+        </div>
+      </div>
+      <div class="empty-5 mobile-only"></div>
+      <div class="empty-10 wide-only"></div>
+    </div>
+  </section>
+  <section id="events">
+    <div class="container events-wrap">
+      <div class="empty-5"></div>
+      <h4>OUR EVENTS</h4>
+      <h2>Lectures & Workshops</h2>
+      <div class="flex-column swapper-1080 event-card">
+        <div class="swapper-780">
+          <div class="event-data-grid">
+            <span class="text-danger huge">05</span>
+            <h5>August</h5>
+            <p class="text-faded">11:00 - 14:00</p>
+          </div>
+          <div>
+            <h5>
+              Formation of the organizational structure of the company in the
+              face of uncertainty.
+            </h5>
+            <p class="text-faded">Online master-class</p>
           </div>
         </div>
         <div class="empty-5 mobile-only"></div>
-        <div class="empty-10 wide-only"></div>
+        <button type="button" class="btn-outline btn-h-mid btn-w-100 w-20p">
+          View more
+        </button>
       </div>
-    </section>
-    <section id="events">
-      <div class="container events-wrap">
-        <div class="empty-5"></div>
-        <h4>OUR EVENTS</h4>
-        <h2>Lectures & Workshops</h2>
-        <div class="flex-column swapper-1080 event-card">
-          <div class="swapper-780">
-            <div class="event-data-grid">
-              <span class="text-danger huge">05</span>
-              <h5>August</h5>
-              <p class="text-faded">11:00 - 14:00</p>
-            </div>
-            <div>
-              <h5>
-                Formation of the organizational structure of the company in the
-                face of uncertainty.
-              </h5>
-              <p class="text-faded">Online master-class</p>
-            </div>
+      <div class="flex-column swapper-1080 event-card">
+        <div class="swapper-780">
+          <div class="event-data-grid">
+            <span class="text-danger huge">24</span>
+            <h5>July</h5>
+            <p class="text-faded">11:00 - 12:30</p>
           </div>
-          <div class="empty-5 mobile-only"></div>
-          <button type="button" class="btn-outline btn-h-mid btn-w-100 w-20p">
-            View more
-          </button>
-        </div>
-        <div class="flex-column swapper-1080 event-card">
-          <div class="swapper-780">
-            <div class="event-data-grid">
-              <span class="text-danger huge">24</span>
-              <h5>July</h5>
-              <p class="text-faded">11:00 - 12:30</p>
-            </div>
-            <div>
-              <h5>Building a customer service department. Best Practices.</h5>
-              <p class="text-faded">Online lecture</p>
-            </div>
+          <div>
+            <h5>Building a customer service department. Best Practices.</h5>
+            <p class="text-faded">Online lecture</p>
           </div>
-          <div class="empty-5 mobile-only"></div>
-          <button type="button" class="btn-outline btn-h-mid btn-w-100 w-20p">
-            View more
-          </button>
         </div>
-        <div class="flex-column swapper-1080 event-card">
-          <div class="swapper-780">
-            <div class="event-data-grid">
-              <span class="text-danger huge">16</span>
-              <h5>July</h5>
-              <p class="text-faded">10:00 - 13:00</p>
-            </div>
-            <div>
-              <h5>
-                How to apply methods of speculative design in practice.
-                Worldbuilding prototyping.
-              </h5>
-              <p class="text-faded">Online workshop</p>
-            </div>
-          </div>
-          <div class="empty-5 mobile-only"></div>
-          <button type="button" class="btn-outline btn-h-mid btn-w-100 w-20p">
-            View more
-          </button>
-        </div>
-        <div class="empty-5"></div>
-        <div class="swapper-580 event-swap">
-          <h5>Do you want more?</h5>
-          <button type="button" class="btn-fill btn-h-lg btn-w-100">
-            Explore all events
-          </button>
-        </div>
-        <div class="empty-5"></div>
-        <img src="source/homepage/misc/dots2.svg" id="dec-7" />
+        <div class="empty-5 mobile-only"></div>
+        <button type="button" class="btn-outline btn-h-mid btn-w-100 w-20p">
+          View more
+        </button>
       </div>
-    </section>
-  </body>
+      <div class="flex-column swapper-1080 event-card">
+        <div class="swapper-780">
+          <div class="event-data-grid">
+            <span class="text-danger huge">16</span>
+            <h5>July</h5>
+            <p class="text-faded">10:00 - 13:00</p>
+          </div>
+          <div>
+            <h5>
+              How to apply methods of speculative design in practice.
+              Worldbuilding prototyping.
+            </h5>
+            <p class="text-faded">Online workshop</p>
+          </div>
+        </div>
+        <div class="empty-5 mobile-only"></div>
+        <button type="button" class="btn-outline btn-h-mid btn-w-100 w-20p">
+          View more
+        </button>
+      </div>
+      <div class="empty-5"></div>
+      <div class="swapper-580 event-swap">
+        <h5>Do you want more?</h5>
+        <button type="button" class="btn-fill btn-h-lg btn-w-100">
+          Explore all events
+        </button>
+      </div>
+      <div class="empty-5"></div>
+      <img src="source/homepage/misc/dots2.svg" id="dec-7" />
+    </div>
+  </section>
+  <section id="certificate">
+    <div class="container">
+      <div class="empty-10 mobile-only"></div>
+      <div class="empty-10 wide-only"></div>
+      <div class="cert-swap">
+        <div>
+          <h4>CREATEX CERTIFICATE</h4>
+          <h2>Your expertise will be confirmed</h2>
+          <p>We are accredited by international professional organizations and institutes:</p>
+          <div class="flex-row logos">
+            <img src="source/homepage/logos/logo1.svg" alt="EU Business school">
+            <img src="source/homepage/logos/logo2.svg" alt="McGill University">
+            <img src="source/homepage/logos/logo3.svg" alt="INCAE Business School">
+          </div>
+        </div>
+        <img src="source/homepage/logos/certificate.jpg" alt="CourseX certificate" class="cert-img">
+      </div>
+      </dic>
+  </section>
+  <section id="team">
+    <div class="container team-wrap">
+      <div class="empty-15"></div>
+      <div class="empty-5"></div>
+      <h4>BEST TUTORS ARE ALL HERE</h4>
+      <h2>Meet our team</h2>
+      <div class="grid col-auto-s gap-m">
+        <div class="team_item">
+          <div class="round-4 bg-yellow team-card-content">
+            <picture class="team-photo">
+              <img src="source/homepage/photos/photo1.png">
+            </picture>
+            <div class="card-shadow"></div>
+            <div class="flex-row card-links">
+              <a><img src="source/homepage/links/fb.svg"></a>
+              <a><img src="source/homepage/links/insta.svg"></a>
+              <a><img src="source/homepage/links/linkedin.svg"></a>
+            </div>
+          </div>
+          <p class="t-18 w-500">Dianne Russell</p>
+          <p class="text-faded">Founder and CEO</p>
+        </div>
+        <div class="team_item">
+          <div class="round-4 bg-yellow team-card-content">
+            <picture class="team-photo">
+              <img src="source/homepage/photos/photo2.png">
+            </picture>
+            <div class="flex-row card-links">
+              <a><img src="source/homepage/links/fb.svg"></a>
+              <a><img src="source/homepage/links/insta.svg"></a>
+              <a><img src="source/homepage/links/linkedin.svg"></a>
+            </div>
+            <div class="card-shadow"></div>
+          </div>
+          <p class="t-18 w-500">Jerome Bell</p>
+          <p class="text-faded">Founder and Program Director</p>
+        </div>
+        <div class="team_item">
+          <div class="round-4 bg-yellow team-card-content">
+            <picture class="team-photo">
+              <img src="source/homepage/photos/photo3.png">
+            </picture>
+            <div class="card-shadow"></div>
+            <div class="flex-row card-links">
+              <a><img src="source/homepage/links/fb.svg"></a>
+              <a><img src="source/homepage/links/insta.svg"></a>
+              <a><img src="source/homepage/links/linkedin.svg"></a>
+            </div>
+          </div>
+          <p class="t-18 w-500">Kristin Watson</p>
+          <p class="text-faded">Marketer, Curator of Marketing Course</p>
+        </div>
+        <div class="team_item">
+          <div class="round-4 bg-yellow team-card-content">
+            <picture class="team-photo">
+              <img src="source/homepage/photos/photo4.png">
+            </picture>
+            <div class="card-shadow"></div>
+            <div class="flex-row card-links">
+              <a><img src="source/homepage/links/fb.svg"></a>
+              <a><img src="source/homepage/links/insta.svg"></a>
+              <a><img src="source/homepage/links/linkedin.svg"></a>
+            </div>
+          </div>
+          <p class="t-18 w-500">Marvin McKinney</p>
+          <p class="text-faded">PM, Curator of Management Course</p>
+        </div>
+      </div>
+
+      <div class="empty-5"></div>
+  </section>
+  <section id="testimonials">
+    <div class="container">
+      <div class="empty-5"></div>
+      <h4>TESTIMONIALS</h4>
+      <h2>What our students say</h2>
+      <div class="flex flex-center">
+        <div class="arrow-wrap btn-prev">
+          <a role="button" data-slide="prev"><svg class="arrow icon-arrow-left">
+              <use xlink:href="#icon-arrow-left"></use>
+            </svg></a>
+        </div>
+        <div class="itcss" id="quotes-slider">
+          <div class="itcss__wrapper">
+            <div class="itcss__items">
+              <div class="itcss__item">
+                <div class="flex-column quote-card">
+                  <p class="t-18">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam
+                    viverra
+                    mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare
+                    turpis
+                    quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas
+                    diam integer in.</p>
+                  <div class="event-data-grid quote-data">
+                    <picture>
+                      <img src="/source/homepage/image-quote.jpg">
+                    </picture>
+                    <p class="w-500">Eleanor Pena</p>
+                    <p class="text-faded">Position, Course</p>
+                  </div>
+                </div>
+              </div>
+              <div class="itcss__item">
+                <div class="flex-column quote-card">
+                  <p class="t-18">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam
+                    viverra
+                    mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare
+                    turpis
+                    quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas
+                    diam integer in.</p>
+                  <div class="event-data-grid quote-data">
+                    <picture>
+                      <img src="/source/homepage/image-quote.jpg">
+                    </picture>
+                    <p class="w-500">Eleanor Pena</p>
+                    <p class="text-faded">Position, Course</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="arrow-wrap btn-next">
+          <a role="button" data-slide="next"><svg class="arrow icon-arrow-right">
+              <use xlink:href="#icon-arrow-right"></use>
+            </svg></a>
+        </div>
+      </div>
+      <div class="empty-5"></div>
+    </div>
+  </section>
+  <section id="blog">
+    <div class="container">
+      <div class="empty-5"></div>
+      <h4>OUR BLOG</h4>
+      <h2>Latest posts</h2>
+      <div class="grid col-auto-m gap-l blog-wrap">
+        <div class="flex-column post-wrap pos-r m-x-a">
+          <picture>
+            <img src="source/homepage/posts/post1.jpg" alt="Traffic arbitrage">
+            <span class="bg-white round-4">Podcast</span>
+          </picture>
+          <div class="flex-row wrap">
+            <p class="w-500 text-faded m-y-0 m-l-5">Marketing</p>
+            <p class="text-faded m-y-0 m-l-5">|</p>
+            <img src="source/homepage/calendar.svg" class="m-l-5">
+            <p class="text-faded m-y-0 m-l-5">September 4, 2020</p>
+            <p class="text-faded m-y-0 m-l-5">|</p>
+            <img src="source/homepage/clock.svg" class="m-l-5">
+            <p class="text-faded m-y-0 m-l-5">36 min</p>
+          </div>
+          <h5>What is traffic arbitrage and does it really make money?</h5>
+          <p>Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus
+            gravida...
+          </p>
+          <a class="w-500">Listen<img src="source/homepage/red-arrow-next.svg" class="m-l-5"></a>
+          <div class="empty-5"></div>
+        </div>
+
+        <div class="flex-column post-wrap pos-r m-x-a">
+          <picture>
+            <img src="source/homepage/posts/post2.jpg" alt="Traffic arbitrage">
+            <span class="bg-white round-4">Video</span>
+          </picture>
+          <div class="flex-row wrap">
+            <p class="w-500 text-faded m-y-0 m-l-5">Management</p>
+            <p class="text-faded m-y-0 m-l-5">|</p>
+            <img src="source/homepage/calendar.svg" class="m-l-5">
+            <p class="text-faded m-y-0 m-l-5">August 25, 2020</p>
+            <p class="text-faded m-y-0 m-l-5">|</p>
+            <img src="source/homepage/clock.svg" class="m-l-5">
+            <p class="text-faded m-y-0 m-l-5">45 min</p>
+          </div>
+          <h5>What to do and who to talk to if you want to get feedback on the product</h5>
+          <p>Neque a, senectus consectetur odio in aliquet nec eu. Ultricies ac nibh urna urna sagittis faucibus...
+          </p>
+          <a class="w-500">Watch<img src="source/homepage/red-arrow-next.svg" class="m-l-5"></a>
+          <div class="empty-5"></div>
+        </div>
+
+        <div class="flex-column post-wrap pos-r m-x-a">
+          <picture>
+            <img src="source/homepage/posts/post3.jpg" alt="Traffic arbitrage">
+            <span class="bg-white round-4">Article</span>
+          </picture>
+          <div class="flex-row wrap">
+            <p class="w-500 text-faded m-y-0 m-l-5">Design</p>
+            <p class="text-faded m-y-0 m-l-5">|</p>
+            <img src="source/homepage/calendar.svg" class="m-l-5">
+            <p class="text-faded m-y-0 m-l-5">August 8, 2020</p>
+          </div>
+          <h5>Should you choose a creative profession if you are attracted to creativity?</h5>
+          <p>Curabitur nisl tincidunt eros venenatis vestibulum ac placerat. Tortor, viverra sed vulputate ultrices...
+          </p>
+          <a class="w-500">Read<img src="source/homepage/red-arrow-next.svg" class="m-l-5"></a>
+          <div class="empty-5"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="subscribe">
+    <div class="container">
+      <div class="empty-10 mobile-only"></div>
+      <div class="empty-15 wide-only"></div>
+      <h4 class="t-center">DON`T MISS ANYTHING</h4>
+      <h2 class="t-center">Subscribe to the Createx School announcements</h2>
+      <div class="flex-row subscribe-form">
+        <input type="email" class="btn-h-mid round-4 m-r-5" </div>
+        <button type="submit" class="btn-fill btn-h-mid btn-w-sm">Subscribe</button>
+      </div>
+      <div class="empty-10 mobile-only"></div>
+      <div class="empty-15 wide-only"></div>
+  </section>
+</body>
+
 </html>

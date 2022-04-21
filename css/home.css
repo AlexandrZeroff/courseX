@@ -449,7 +449,7 @@
   }
 }
 
-.events-wrap{
+.events-wrap {
   z-index: 0;
 }
 
@@ -474,7 +474,7 @@
 .event-data-grid {
   display: grid;
   grid-template-columns: 100px 1fr;
-  grid-template-areas: "day month" "day time";
+  grid-template-areas: "left top" "left bottom";
   min-width: 220px;
 }
 
@@ -482,7 +482,7 @@
   justify-self: center;
   vertical-align: middle;
   font-size: 48px;
-  grid-area: day;
+  grid-area: left;
 }
 
 .event-card h5 {
@@ -497,7 +497,7 @@
 }
 
 .event-data-grid h5 {
-  grid-area: month;
+  grid-area: top;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -508,7 +508,7 @@
 }
 
 .event-data-grid p {
-  grid-area: time;
+  grid-area: bottom;
 }
 
 @media (min-width: 1080px) {
@@ -558,3 +558,170 @@
     left: -10vw;
   }
 }
+
+.cert-swap {
+  width: 100%;
+}
+
+@media (min-width: 780px) {
+  .cert-swap {
+    width: 50%;
+  }
+}
+
+.logos {
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 5vh;
+}
+
+.cert-img {
+  width: 100%;
+  -webkit-box-shadow: 0px 10px 30px -5px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 10px 30px -5px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 10px 30px -5px rgba(34, 60, 80, 0.2);
+}
+
+@media (min-width: 780px) {
+  .cert-img {
+    position: absolute;
+    top: 15%;
+    right: 0%;
+    width: 50%;
+  }
+}
+
+#team,
+#testimonials {
+  background-color: #f4f5f7;
+}
+
+.team-arrows {
+  align-items: center;
+}
+
+.team_item p{
+  text-align: center;
+}
+
+.team-card-content {
+  position: relative;
+  display: grid;
+  padding: 0;
+}
+
+.team-photo img {
+  width: 100%;
+  vertical-align: bottom;
+  grid-area: 1/2;
+}
+
+.card-shadow {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(to top, #000, rgba(0, 0, 0, 0) bottom/100% 60%)
+    no-repeat;
+  grid-area: 1/2;
+}
+
+.card-links {
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  justify-content: flex-end;
+  max-height: 30px;
+  grid-area: 1/2;
+}
+
+.card-links a {
+  margin: 10px;
+}
+
+.team_item:hover .card-links {
+  display: inline-flex;
+}
+
+@media (min-width: 780px){
+  .itcss{
+    min-width: 80%;
+  }
+}
+
+.quote-card {
+  box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 3vh 3vw;
+}
+
+.quote-data{
+  align-items: center;
+}
+
+.quote-data picture{
+  margin: auto;
+  grid-area: left;
+}
+
+.quote-data picture img, .quote-data p{
+  vertical-align: middle;
+}
+
+.quote-data p{
+  margin-left: 10px;
+}
+
+.quote-data .w-500{
+  grid-area: top;
+}
+
+.arrow-wrap {
+  display: none;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  transition: background-color 0.3s;
+}
+
+@media (min-width: 780px){
+  .arrow-wrap{
+    display: inline-block;
+  }
+}
+
+.arrow-wrap a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.arrow-wrap:hover {
+  background-color: #ff3f3a;
+}
+
+.arrow-wrap:hover .arrow {
+  fill: #fff;
+}
+
+.post-wrap{
+  max-width: 360px;
+}
+
+.post-wrap picture img{
+  width: 100%;
+}
+
+.post-wrap picture span{
+  padding: 3px 10px;
+  position: absolute;
+  top: 4%;
+  left: 5%
+}
+

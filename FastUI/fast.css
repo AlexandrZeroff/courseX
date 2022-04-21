@@ -1,0 +1,181 @@
+/* ######################### Root variables ############## */
+
+:root {
+  /* Specifies minimal column width for each screen-width */
+  --col-s: 200px;
+  --col-m: 280px;
+  --col-l: 360px;
+  --col-xl: 420px;
+}
+
+/* ####################### Basic containers ##################*/
+
+/* --------------------------------------- Flex containers ----------- */
+
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.no-wrap {
+  flex-wrap: nowrap;
+}
+
+/* ----------------------------------------- Grid containers --------- */
+
+.grid {
+  display: grid;
+}
+
+/* Specifies column width */
+
+.col-2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.col-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.col-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Specifies auto-column minimal width */
+
+.col-auto-s {
+  grid-template-columns: repeat(auto-fit, minmax(var(--col-s), 1fr));
+}
+
+.col-auto-m {
+  grid-template-columns: repeat(auto-fit, minmax(var(--col-m), 1fr));
+}
+
+.col-auto-l {
+  grid-template-columns: repeat(auto-fit, minmax(var(--col-l), 1fr));
+}
+
+.col-auto-xl {
+  grid-template-columns: repeat(auto-fit, minmax(var(--col-xl), 1fr));
+}
+
+/* Specifies grid gap */
+
+.gap-s {
+  column-gap: 1vw;
+  row-gap: 1vw;
+}
+
+.gap-m {
+  column-gap: 2vw;
+  row-gap: 2vw;
+}
+
+.gap-l {
+  column-gap: 3vw;
+  row-gap: 3vw;
+}
+
+.gap-xl {
+  column-gap: 4vw;
+  row-gap: 4vw;
+}
+
+
+/* ########################### Margins & Paddings #################### */
+
+/* 
+-m   - is prefix for "margin"
+
+-m-y   - is margin on Y axis (top and bottom)
+
+-m-x   - is margin on X axis (left and right)
+
+-r / -l / -t / -b   : Margin right/left/top/bottom respectively 
+
+-a    : margin: auto;
+*/
+
+.m-xy-0 {
+  margin: 0;
+}
+
+.m-y-0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.m-x-0 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.m-xy-a{
+  margin: auto;
+}
+
+.m-x-a{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.m-y-a{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.m-r-5 {
+  margin-right: 5px;
+}
+
+.m-l-5 {
+  margin-left: 5px;
+}
+
+.m-t-5 {
+  margin-top: 5px;
+}
+
+.m-b-5 {
+  margin-bottom: 5px;
+}
+
+
+
+
+
+/*  #########################3 Positions & Alignements ########### */
+
+.pos-a {
+  position: absolute;
+}
+
+.pos-r {
+  position: relative;
+}
+
+.pos-s {
+  position: sticky;
+}
+
+.pos-f {
+  position: fixed;
+}

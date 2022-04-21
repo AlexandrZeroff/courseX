@@ -1,0 +1,20 @@
+__________             _____     _____  _________
+___  ____/_____ _________  /_    __  / / /___  _/
+__  /_   _  __ `/_  ___/  __/    _  / / / __  /  
+_  __/   / /_/ /_(__  )/ /_      / /_/ / __/ /   
+/_/      \__,_/ /____/ \__/      \____/  /___/   
+            
+
+
+##########################################################################################
+##                                                                                      ##
+##      Fast UI is just a simple CSS library with basic CSS classes and definitions     ##
+##      to build responsive websites and apps x-times faster.                           ##
+##                                                                                      ##
+##########################################################################################
+
+
+Below I have listed the basic class specifications to facilitate 
+understanding of the library structure and make it as simple as possible to use.
+
+

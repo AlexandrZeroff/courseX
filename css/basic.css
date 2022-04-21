@@ -54,34 +54,6 @@ body {
   font-family: var(--MainFont);
 }
 
-/* ----------------------------------Flex containers */
-
-.flex-col,
-.flex-col-center {
-  display: flex;
-  flex-direction: column;
-}
-
-.flex-row,
-.flex-row-center {
-  display: flex;
-  flex-direction: row;
-}
-
-.flex-col-center {
-  justify-content: center;
-}
-
-.flex-row-center {
-  align-items: center;
-}
-
-/* ---------------------------------------Grid containers */
-
-.grid {
-  display: grid;
-}
-
 /* -------------------------------------Tags styles */
 
 h1 {
@@ -136,8 +108,7 @@ p {
   line-height: 26px;
 }
 
-a:hover,
-button:hover {
+a:hover{
   cursor: pointer;
 }
 
@@ -174,66 +145,6 @@ button:hover {
     display: none;
   }
 }
-/* -----------------------------------Button styles */
-
-.btn-fill,
-.btn-outline {
-  border-radius: 4px;
-  text-align: center;
-  font-size: 16px;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.btn-fill {
-  background: linear-gradient(55.95deg, #ff3f3a 0%, #f75e05 100%);
-  border: none;
-  color: #fff;
-  transition: box-shadow 0.3s;
-}
-
-.btn-outline {
-  border: 1px solid #ff3f3a;
-  background-color: transparent;
-  color: #ff3f3a;
-  transition: all 0.3s;
-}
-
-.btn-fill:hover,
-.btn-outline:hover {
-  -webkit-box-shadow: 0px 9px 14px -2px rgba(255, 63, 58, 0.5);
-  -moz-box-shadow: 0px 9px 14px -2px rgba(255, 63, 58, 0.5);
-  box-shadow: 0px 9px 14px -2px rgba(255, 63, 58, 0.5);
-}
-
-.btn-outline:hover {
-  background-color: #ff3f3a;
-  color: #fff;
-}
-
-.btn-h-mid {
-  height: 44px;
-}
-
-.btn-h-lg {
-  height: 52px;
-}
-
-.btn-w-sm {
-  width: 128px;
-}
-
-.btn-w-mid {
-  width: 160px;
-}
-
-.btn-w-lg {
-  width: 200px;
-}
-
-.btn-w-100{
-  width: 100%;
-}
 
 /* ----------------------------------------Colors */
 
@@ -253,12 +164,32 @@ button:hover {
   background-color: crimson;
 }
 
+.bg-yellow {
+  background-color: #ffcf2d;
+}
+
+.bg-white{
+  background-color: #fff;
+}
+
 .text-faded {
   color: #787a80;
 }
 
 .text-danger {
   color: #ff4242;
+}
+
+.t-18 {
+  font-size: 18px;
+}
+
+.w-500 {
+  font-weight: 500;
+}
+
+.t-center{
+  text-align: center;
 }
 
 /* ------------------------------------Containers */
@@ -337,7 +268,7 @@ button:hover {
   transition: color 0.5s;
 }
 
-.arrow {
+.down-arrow {
   margin-left: 5px;
   width: 12px;
   vertical-align: middle;
@@ -410,8 +341,52 @@ button:hover {
   }
 }
 
+
+
 /* -----------------------------------------Images */
 
-.img-w-100{
+.img-w-100 {
   width: 100%;
+}
+
+.mar-l-auto {
+  margin-left: auto;
+}
+
+/* ---------------------------------------------Utils */
+.arrow {
+  margin: 0;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: black;
+  transition: fill 0.3s;
+}
+
+.round-4 {
+  border-radius: 4px;
+}
+
+
+/* ------------------------------------- Subscribing form -----*/
+
+#subscribe{
+  background: linear-gradient(
+    55.95deg,
+    rgba(255, 63, 58, 0.2) 0%,
+    rgba(247, 94, 5, 0.2) 100%
+  );
+}
+
+.subscribe-form{
+  justify-content: center;
+}
+
+.subscribe-form input{
+  border: 1px solid #D7DADD;
+  box-sizing: border-box;
+  max-width: 300px;
+  flex-grow: 0.5;
 }
